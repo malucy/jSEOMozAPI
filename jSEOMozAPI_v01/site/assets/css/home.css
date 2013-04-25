@@ -1,0 +1,47 @@
+/*body container*/
+#main_body_container{ width:100%; float:left; background:url(../images/body_bg.jpg) repeat-x 0 0;}
+#body_container{ width:100%; float:left; position:relative}
+#body_container .testimonial_container{width:850px; float:left; background:url(../images/testimonial_bg.jpg) no-repeat 0 0; padding:8px 54px 9px 56px;}
+#body_container .testimonial_container p{ font-size:19px; line-height:21px; color:#012b5a; font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; padding-bottom:8px; text-shadow:1px 1px #ffffff}
+#body_container .testimonial_container .name{ width:100%; float:left; text-align:right; color:#757973; font-size:12px; line-height:14px;}
+
+#body_container .features_container{ width:100%; float:left; margin:32px 0 30px 0; position:relative;}
+#body_container .features_container ul{ width:100%; float:left; position:relative}
+#body_container .features_container ul li{ float:left; width:288px;  height:88px; background:url(../images/feature_box.jpg) no-repeat 0 0; padding:0px 0 8px 12px; position:relative; margin-right:30px; display:inline;}
+#body_container .features_container ul li:hover {background:url(../images/feature_box_hover.jpg) no-repeat 0 0;}
+#body_container .features_container ul li.last{ margin-right:0;}
+#body_container .features_container ul li h3{ color:#083264; font-size:23px; line-height:25px; font-weight:normal;}
+#body_container .features_container ul li h3 span{ font-size:54px; line-height:62px}
+#body_container .features_container ul li img{ position:absolute; right:8px; top:4px}
+
+#body_container .left_container{ width:630px; float:left; background:url(../images/left_cont_bottom_img.jpg) no-repeat bottom left;padding-bottom:155px}
+#body_container .left_container .content{ width:100%; float:left;}
+#body_container .left_container .content h1{ font-size:30px; line-height:37px; color:#013f74;background:url(../images/content_h1_bg.jpg) no-repeat bottom center; padding-bottom:23px;}
+#body_container .left_container .content p{ width:93%; float:left; font-size:17px; color:#333333; padding-top:15px;}
+#body_container .left_container .testimonial_container2{ width:100%; float:left; background:url(../images/testimonial2_y_bg.jpg) repeat-y 0 0; margin-top:32px;}
+#body_container .left_container .testimonial_container2 .bottom_bg{ width:100%; float:left; background:url(../images/testimonial2_bottom_curv.jpg) no-repeat bottom left; min-height:90px; height:auto!important; height:90px}
+#body_container .left_container .testimonial_container2 .bottom_bg .details{ width:590px; float:left; background:url(../images/testimonial2_top_curv.jpg) no-repeat 0 0; padding: 17px 20px 40px 19px;}
+#body_container .left_container .testimonial_container2 .bottom_bg .details p{ font-size:14px; line-height:16px; color:#5d5d5d; font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; width:100%; float:left;}
+#body_container .left_container .testimonial_container2 .bottom_bg .details .name{ width:95%; float:left; text-align:right; color:#757973; font-size:12px; padding:0 7px 0 0 }
+
+#body_container .right_container{ width:302px; margin-left:auto;margin-right:auto;margin-top:50px;}
+#body_container .right_container .free_consulation{ width:100%; float:left; background:url(../images/free_consultaion_y_bg.jpg) repeat-y 0 0;}
+#body_container .right_container .free_consulation .bottom_bg{ width:100%; float:left; background:url(../images/free_consultaion_bottom_bg.jpg) no-repeat bottom left; min-height:11px; height:auto!important; height:11px;}
+#body_container .right_container .free_consulation .bottom_bg .details{ width:100%; float:left; background:url(../images/free_consultaion_top_bg.jpg) no-repeat 0 0;}
+#body_container .right_container .free_consulation .bottom_bg .details .head{ float:left; padding:0 7px 0 16px; text-transform:uppercase}
+#body_container .right_container .free_consulation .bottom_bg .details .head .free{ font-size:45px; line-height:52px; margin-top:3px; color:#ffffff; width:124px; float:left;}
+#body_container .right_container .free_consulation .bottom_bg .details .head strong{ font-size:22px; line-height:normal; color:#ffffff; width:152px; float:left; padding-top:4px}
+#body_container .right_container .free_consulation .bottom_bg .details .head small{ font-size:19px; line-height:normal; color:#ffffff; width:152px; float:left;}
+#body_container .right_container .free_consulation .bottom_bg .details .form_container{ width:278px; float:left; padding:17px 0 22px 24px;}
+#body_container .right_container .free_consulation .bottom_bg .details .form_container form{ width:100%; float:left;}
+#body_container .right_container .free_consulation .bottom_bg .details .form_container form .input_bg{ width:256px; float:left; background:url(../images/input_bg.jpg) no-repeat 0 0; padding:5px; margin-bottom:5px;}
+#body_container .right_container .free_consulation .bottom_bg .details .form_container form .input_bg input{ width:256px; float:left;  background:none; border:none; font-size:18px; font-style:italic; color:#666; font-family:Arial, Helvetica, sans-serif;}
+#body_container .right_container .free_consulation .bottom_bg .details .form_container form .btn{ float:left; margin:5px 0 0 59px; display:inline;}
+#body_container .right_container .free_consulation .bottom_bg .details .form_container form  .submit_btn{float:left; background: url(../images/submit_btn.gif) no-repeat 0 0;height:35px;width:146px; cursor:pointer;border:none;margin:5px 0 0 59px; display:inline;}
+
+#body_container .right_container .free_consulation .bottom_bg .details .form_container form  .submit_btn_over{float:left; background:url(../images/submit_btn_hover.gif) no-repeat 0 0; height:35px;width:146px; border:none; margin:5px 0 0 59px; display:inline; cursor:pointer;}
+
+#body_container .right_container .call_us{ width:302px; float:left; background:url(../images/call_us_bg.jpg) no-repeat 0 0;padding:28px 15px 10px 13px ; font-size:30px; line-height:32px!Important;; color:#ffffff!Important;;font: normal 14px/17px Arial, Helvetica, sans-serif!Important;}
+#body_container .right_container .call_us p span{ font-size:22px; line-height:24px;}
+
+/*body container*/

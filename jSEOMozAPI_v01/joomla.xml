@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<joomla>
+    <component>
+        <name>jSEOMozAPI</name>
+        <lowname>jseomozapi</lowname>
+        <uppername>JSEOMOZAPI</uppername>
+        <version>0.0.1</version>
+        <projectDir>C:\Users\USER 1\Documents\NetBeansProjects\jSEOMozAPI</projectDir>
+    </component>
+</joomla>

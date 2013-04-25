@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_SEOMOZAPI_FORM_LBL_REQUEST_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_SEOMOZAPI_FORM_LBL_REQUEST_CREATED_BY"
+            description="COM_SEOMOZAPI_FORM_DESC_REQUEST_CREATED_BY"  /> 
+
+       <field name="customer_name" type="text"
+                
+            label="COM_SEOMOZAPI_FORM_LBL_REQUEST_CUSTOMER_NAME"
+            description="COM_SEOMOZAPI_FORM_DESC_REQUEST_CUSTOMER_NAME" 
+                
+                
+                 required="true" 
+            filter="raw"
+            maxlength="50" /> 
+
+       <field name="email" type="text"
+                
+            label="COM_SEOMOZAPI_FORM_LBL_REQUEST_EMAIL"
+            description="COM_SEOMOZAPI_FORM_DESC_REQUEST_EMAIL" 
+                
+                
+                 required="true" 
+            filter="raw"
+            size="50"
+            maxlength="50" /> 
+
+       <field name="phone_number" type="text"
+                
+            label="COM_SEOMOZAPI_FORM_LBL_REQUEST_PHONE_NUMBER"
+            description="COM_SEOMOZAPI_FORM_DESC_REQUEST_PHONE_NUMBER" 
+                
+                
+                
+            filter="tel"
+            size="12"
+            maxlength="12" /> 
+
+       <field name="domain" type="text"
+                
+            label="COM_SEOMOZAPI_FORM_LBL_REQUEST_DOMAIN"
+            description="COM_SEOMOZAPI_FORM_DESC_REQUEST_DOMAIN" 
+                
+                
+                 required="true" 
+            filter="url"
+            size="50"
+            maxlength="50" /> 
+
+       <field name="domain_competitor" type="text"
+                
+            label="COM_SEOMOZAPI_FORM_LBL_REQUEST_DOMAIN_COMPETITOR"
+            description="COM_SEOMOZAPI_FORM_DESC_REQUEST_DOMAIN_COMPETITOR" 
+                
+                
+                 required="true" 
+            filter="url"
+            size="50"
+            maxlength="50" /> 
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+    </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>
