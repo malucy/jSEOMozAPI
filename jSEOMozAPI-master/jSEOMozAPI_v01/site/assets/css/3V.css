@@ -1,0 +1,91 @@
+/* 
+    Document   : newCascadeStyleSheet
+    Created on : Apr 19, 2013, 1:24:47 PM
+    Author     : Ginger
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+div.specialStart {
+    display:none;
+    float:left;
+    position: relative;
+    left: 1000px;
+    opacity: 0;
+}
+
+form input
+{
+    width: 240px !important;
+    font-size: 18px;
+    margin: 0px !important;
+    margin-bottom: 10px !important;
+}
+form label
+{
+    margin: 0px 0px 5px 0px !important;
+    font-size: 18px !important;
+    color: #666 !important;
+}
+#bgForm
+{
+    background: url(../images/form_bg_top.png) no-repeat;
+    height: 93px;
+    z-index: 99;
+}
+#generateSubmit
+{
+    background: url(../images/btn-form-Generate-2-215x122.png	) no-repeat top left;
+    margin: 0px !important;
+    margin-left: 15px !important;
+    margin-top: 10px !important;
+}
+#generateSubmit:hover
+{
+    background-position: bottom left;
+    cursor: pointer;
+}
+
+.front-end-edit ul {
+    padding: 0 !important;
+}
+.front-end-edit li {
+    list-style: none;
+    margin-bottom: 6px !important;
+}
+.front-end-edit label {
+    margin-right: 10px;
+    display: block;
+    float: left;
+    width: 200px !important;
+}
+.front-end-edit .radio label {
+    float: none;
+}
+.front-end-edit .readonly {
+    border: none !important;
+    color: #666;
+}    
+.front-end-edit #editor-xtd-buttons {
+    height: 50px;
+    width: 600px;
+    float: left;
+}
+.front-end-edit .toggle-editor {
+    height: 50px;
+    width: 120px;
+    float: right;
+}
+
+#jform_rules-lbl{
+    display:none;
+}
+
+#access-rules a:hover{
+    background:#f5f5f5 url('../images/slider_minus.png') right  top no-repeat;
+    color: #444;
+}
+
+fieldset.radio label{
+    width: 50px !important;
+}

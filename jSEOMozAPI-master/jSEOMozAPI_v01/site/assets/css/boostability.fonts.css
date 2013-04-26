@@ -1,0 +1,37 @@
+﻿h1, h2, h3
+{
+	font-family: "Open Sans", Verdana;
+	font-weight: 700;
+}
+h4, h5
+{
+	font-family: "Open Sans", Verdana;
+	font-weight: 400;
+}
+
+#menu ul li, #header .login ul li a
+{
+	font-family: "Open Sans", Verdana;
+	font-weight: 600;
+}
+#right_container .featured_box h3 
+{
+	font-family: "Open Sans", Verdana;
+	font-weight:700;
+}
+
+.cufon_300 
+{
+	font-family: "Open Sans", Verdana;
+	font-weight: 400;
+}
+.cufon_500 
+{
+	font-family: "Open Sans", Verdana;
+	font-weight: 600;
+}
+.cufon_700 
+{
+	font-family: "Open Sans", Verdana;
+	font-weight: 700;
+}
