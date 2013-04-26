@@ -12,10 +12,6 @@ class mozAPI {
     public $ini_array;
     public $html;
     
-    public function getMozIni() {
-        $this->$ini_array = parse_ini_file("mozAPI.ini");
-    }
-    
     public function getMozData($inURL) {
         // you can obtain you access id and secret key here: http://www.seomoz.org/api/keys
         $accessID = "member-7fa6870997";
@@ -54,7 +50,11 @@ class mozAPI {
         $content = curl_exec($ch);
         curl_close($ch);
         $array = json_decode($content, true);
-
+        if(empty($array)) {
+            //$this->html = $this->html."<br/>Domain ".$inURL." is empty.<br/>";
+        } else {
+            //$this->html = $this->html.print_r($array)."<br/>"; 
+        }
         return $array;
     }
     
@@ -101,75 +101,6 @@ class mozAPI {
         return true;
     }
     
-    public function getSEOHTMLHeader() {
-
-        $html = 
-        "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=8\" />
-	<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
-	<title>3V Business Solutions Free Website Analysis | Free SEO Analysis | Detroit SEO Company Analysis</title>
-	<meta name=\"description\" content=\"Test your site for Google Yahoo, and Bing optimization. How do you compare with your online competition? Find out with a free website analysis.\" />
-	<meta name=\"keywords\" content=\"\" />
-	
-	<script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js\"></script>
-        <script type=\"text/javascript\" src=\"./js/jquery.fancybox-1.3.4.pack.js\"></script>
-        <link rel=\"Stylesheet\" href=\"./css/jquery.fancybox-1.3.4.css\" />
-                
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
-        <link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"./css/template.css\">
-	<link href=\"./css/base.css\" rel=\"stylesheet\" type=\"text/css\" />
-	<link href=\"./css/boostability.fonts.css\" rel=\"stylesheet\" type=\"text/css\" />
-	<link href=\"./css/layout.css\" rel=\"stylesheet\" type=\"text/css\" />
-	<link href=\"./css/custom.css\" rel=\"Stylesheet\" type=\"text/css\" />
-
-        <script type=\"text/javascript\">
-
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-29180909-1']);
-            _gaq.push(['_setDomainName', '3vbizsolutions.com']);
-            _gaq.push(['_trackPageview']);
-
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-
-        </script>";
-
-        return $html;
-    }
-
-    public function getHTMLHeader() {
-
-        $html = "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><title>3V - SEO Website Analysis</title>
-        <meta name=\"author\" content=\"Michael Lucy\">
-        <link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"./css/styles.css\">
-        <link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"./css/animate.css\">
-        <link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"./css/home.css\">
-        <link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"./css/template.css\">
-        <script type=\"text/javascript\" src=\"./js/Scripts/menu.js\"></script>
-	<script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js\"></script>
-	<script type=\"text/javascript\" src=\"./js/Scripts/jquery.cycle.all.js\"></script>
-	<script type=\"text/javascript\" src=\"./js/Scripts/main.js\"></script>
-
-        <script type=\"text/javascript\">
-
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-29180909-1']);
-            _gaq.push(['_setDomainName', '3vbizsolutions.com']);
-            _gaq.push(['_trackPageview']);
-
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-
-        </script>";
-
-        return $html;
-    }
-
     public function getHTMLBody() {
         $html = 
         "<header id=\"heading\">
@@ -180,41 +111,6 @@ class mozAPI {
 
         return $html;
     }
-
-    public function getHTMLFooter() {
-        $html = "<footer id=\"extra\"></footer>
-                 <script type=\"text/javascript\">
-                    $(document).ready(function(){
-                    $('form').submit(function(e){
-                        e.preventDefault();
-                        var timer;
-    
-                        $('#name').addClass('shakenform wrongdata');
-    
-                        clearTimeout(timer);
-                        timer = setTimeout(function() { $('#name').removeClass('shakenform') }, 800);
-                    });
-  
-                $('#error a').on('click', function(e){
-                    e.preventDefault();
-    
-                    var timer;
-                    var animateStyle = $(this).attr('data-anim');
-    
-                    $('#error').addClass(animateStyle);
-    
-                    // reset timer and after 800ms remove the error div
-                    clearTimeout(timer);
-                    timer = setTimeout(function() { $('#error').remove(); }, 800);  
-                });
-            });
-        </script>
-
-    </body>";
-
-        return $html;
-    }
-
 }
 
 ?>
