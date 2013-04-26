@@ -18,6 +18,7 @@ $lang = JFactory::getLanguage();
 $lang->load('com_seomozapi', JPATH_ADMINISTRATOR);
 // Add the css files to the head of the document
 $document = JFactory::getDocument();
+$document->addStyleSheet(JURI::base() . 'components/com_seomozapi/assets/css/template.css');
 $document->addStyleSheet(JURI::base() . 'components/com_seomozapi/assets/css/3V.css');
 $document->addStyleSheet(JURI::base() . 'components/com_seomozapi/assets/css/layout.css');
 $document->addStyleSheet(JURI::base() . 'components/com_seomozapi/assets/css/custom.css');
@@ -26,53 +27,6 @@ $document->addStyleSheet('http://fonts.googleapis.com/css?family=Open+Sans:400,7
 
 ?>
 
-<!-- Styling for making front end forms look OK -->
-<!-- This should probably be moved to the template CSS file -->
-<style>
-    .front-end-edit ul {
-        padding: 0 !important;
-    }
-    .front-end-edit li {
-        list-style: none;
-        margin-bottom: 6px !important;
-    }
-    .front-end-edit label {
-        margin-right: 10px;
-        display: block;
-        float: left;
-        width: 200px !important;
-    }
-    .front-end-edit .radio label {
-        float: none;
-    }
-    .front-end-edit .readonly {
-        border: none !important;
-        color: #666;
-    }    
-    .front-end-edit #editor-xtd-buttons {
-        height: 50px;
-        width: 600px;
-        float: left;
-    }
-    .front-end-edit .toggle-editor {
-        height: 50px;
-        width: 120px;
-        float: right;
-    }
-
-    #jform_rules-lbl{
-        display:none;
-    }
-
-    #access-rules a:hover{
-        background:#f5f5f5 url('../images/slider_minus.png') right  top no-repeat;
-        color: #444;
-    }
-
-    fieldset.radio label{
-        width: 50px !important;
-    }
-</style>
 <script type="text/javascript">
     function getScript(url, success) {
         var script = document.createElement('script');
@@ -95,24 +49,22 @@ $document->addStyleSheet('http://fonts.googleapis.com/css?family=Open+Sans:400,7
     getScript('//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', function() {
         js = jQuery.noConflict();
         js(document).ready(function() {
-            js('#form-request').submit(function(event) {
-                                                        
+            js('#form-request').submit(function(event) {                                                     
                 console.log('test 1');
-
+                $('#info1').hide();
+                $('#form-request').hide();
+                $('#bgForm').hide();
+                $('#info2').show();
+                console.log('test 2');
                 $.post('<?php echo JRoute::_('index.php?option=com_seomozapi&task=request.save'); ?>', $('#form-request').serialize(), function (data, textStatus) {
-                    console.log('test 2.1');
-                    $('#info1').hide();
-                    console.log('test 2.2');
-                    $('#form-request').hide();
-                    console.log('test 2.3');
-                    $('#bgForm').hide();
-                    console.log('test 2.4');
-                    $('#info2').append('HELLO!');
-                    console.log('test 2.5');
+                    setTimeout(function () {
+                        $('#info2').fadeOut(300);
+                        $('#info3').show();
+                        $('#info3').append(data);
+                    }, 3000); 
                 });
                 console.log('test 3');
                 return false;
-                console.log('test 4');
             });
         });
     });
@@ -138,7 +90,7 @@ $document->addStyleSheet('http://fonts.googleapis.com/css?family=Open+Sans:400,7
                             <h2 style="margin-bottom: 15px; font-size: 24px;">
                                 Your Instant Website Analysis helps you know:</h2>
                             <div id="info1" style="float: left;">
-                                <div style="float: left; width: 40px; height: 40px; margin-top: 2px; background: url('<?php $this->baseurl?>/components/com_seomozapi/assets/images/icon1.png') no-repeat scroll 0 0px transparent;
+                                <div style="float: left; width: 40px; height: 40px; margin-top: 2px; background: url('<?php $this->baseurl?>/2013/components/com_seomozapi/assets/images/icon1.png') no-repeat scroll 0 0px transparent;
                                      margin-right: 5px;">
                                 </div>
                                 <div style="float: left; margin-left: 10px; line-height: 45px;">
@@ -150,7 +102,7 @@ $document->addStyleSheet('http://fonts.googleapis.com/css?family=Open+Sans:400,7
                                 <div style="clear: both;">
                                 </div>
                                 <div style="margin-top: 15px;">
-                                    <div style="float: left; width: 40px; height: 40px; margin-top: 2px; background: url('<?php $this->baseurl?>/components/com_seomozapi/assets/images/icon2.png') no-repeat scroll 0 0px transparent;
+                                    <div style="float: left; width: 40px; height: 40px; margin-top: 2px; background: url('<?php $this->baseurl?>/2013/components/com_seomozapi/assets/images/icon2.png') no-repeat scroll 0 0px transparent;
                                          margin-right: 5px;">
                                     </div>
                                     <div style="float: left; margin-left: 10px; line-height: 45px; font-size: 18px; color: #888;">
@@ -159,7 +111,7 @@ $document->addStyleSheet('http://fonts.googleapis.com/css?family=Open+Sans:400,7
                                 <div style="clear: both;">
                                 </div>
                                 <div style="margin-top: 10px;">
-                                    <div style="float: left; width: 40px; height: 40px; margin-top: 2px; background: url('<?php $this->baseurl?>/components/com_seomozapi/assets/images/icon3.png') no-repeat scroll 0 0px transparent;
+                                    <div style="float: left; width: 40px; height: 40px; margin-top: 2px; background: url('<?php $this->baseurl?>/2013/components/com_seomozapi/assets/images/icon3.png') no-repeat scroll 0 0px transparent;
                                          margin-right: 5px;">
                                     </div>
                                     <div style="float: left; margin-left: 10px; line-height: 45px; font-size: 18px; color: #888;">
@@ -169,7 +121,10 @@ $document->addStyleSheet('http://fonts.googleapis.com/css?family=Open+Sans:400,7
                                 <div style="clear: both;">
                                 </div>
                             </div>
-                            <div id="info2"></div>
+                            <div id="info2" style="display:none;"><img src="<?php $this->baseurl?>/2013/components/com_seomozapi/assets/images/lightbox-ico-loading.gif"/><br/><br/>
+                                <div style="width:100%;text-align:100%">Retrieving your website analysis, this will only take a few seconds.</div>
+                            </div>
+                            <div id="info3" style="display:none;"></div>
                             <div id="formContainer" class="form-container" style="margin-top: 0px; padding-bottom: 0px;
                                  float: right; width: 323px; margin-top: -20px;">
                                 <div id="bgForm" style="position: relative;">
